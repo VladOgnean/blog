@@ -15,12 +15,10 @@
       <li><?php echo anchor("news_posts", "TopNews") ?></li>
       <li><?php echo anchor("date_personale_membri", "Newsletter") ?></li>
       <?php if(isset($this->session->userdata["logged_in"])) { ?>
-        <li><?php echo anchor("admin", htmlspecialchars($this->session->userdata["logged_in"]["user_name"])) ?></li>
-        <li><?php echo anchor("logout", "Logout") ?></li>
+      <li><?php echo anchor("admin", htmlspecialchars($this->session->userdata["logged_in"]["user_name"])) ?></li>
+      <li><?php echo anchor("logout", "Logout") ?></li>
       <?php } else { ?>
-        <li><?php echo anchor("login", "Login") ?></li>
+      <li><?php echo anchor("login", "Login") ?></li>
       <?php } ?>
-
     </ul>
-
-    <div class="container">
+  <div class="container">

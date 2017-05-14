@@ -21,4 +21,3 @@ class Home_posts_model extends CI_Model {
 }
 
 ?>
-

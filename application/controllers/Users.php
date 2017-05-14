@@ -11,8 +11,6 @@ class Users extends CI_Controller {
 
   public function login()
 {
-
-//This method will have the credentials validation
   $this->load->helper('security');
   $this->load->library('form_validation');
   $this->load->helper('email');
@@ -21,7 +19,6 @@ class Users extends CI_Controller {
 
    if($this->form_validation->run() == FALSE)
    {
-//Field validation failed.  User redirected to login page
     $this->load->view("layout/header");
     $this->load->view('users_view/login');
     $this->load->view("layout/footer");
@@ -43,19 +40,16 @@ public function logout()
 
   public function check_database($password)
  {
-   //Field validation succeeded.  Validate against database
    $email = $this->input->post('email');
-//query the database
    $row = $this->Users_model->login($email, $password);
-
-   if($row != false) {
+   if($row != false)
+   {
     $sess_array = array(
         'id' => $row->id,
         'email' => $row->email,
         'user_name' => $row->user_name
         );
        $this->session->set_userdata('logged_in', $sess_array);
-       //$this->load->view('users_view/login', $sess_array);
    }
    else
    {

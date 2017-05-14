@@ -46,24 +46,21 @@ class News_posts extends CI_Controller {
 
   public function fileupload_check($file, $image_name)
   {
-    // first make sure that there is no error in uploading the files
     if($_FILES[$image_name]['error'] != 0)
     {
-      // save the error message and return false, the validation of uploaded files failed
       $this->form_validation->set_message($image_name, 'Couldn\'t upload the file');
       return FALSE;
     }
-
-    // next we pass the upload path for the images
     $config['upload_path'] = FCPATH . 'upload/';
-    // also, we make sure we allow only certain type of images
     $config['allowed_types'] = 'gif|jpg|png';
     $this->upload->initialize($config);
-
-    if($this->upload->do_upload($image_name)) {
+    if($this->upload->do_upload($image_name))
+    {
       $this->{'_uploaded_'.$image_name.'_path'} = "upload/".$this->upload->data()["file_name"];
       return TRUE;
-    } else {
+    }
+    else
+    {
       $this->form_validation->set_message($image_name, $this->upload->display_errors());
       return TRUE;
     }
