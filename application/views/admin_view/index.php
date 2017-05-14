@@ -1,0 +1,1 @@
+<h1>You are in administrator mode. Now you can edit this webpage.</h1>

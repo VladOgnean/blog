@@ -1,0 +1,105 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.alert {
+  color: red;
+}
+
+  li a:hover {
+  background-color: #279312;
+  color: white;
+}
+
+div.container {
+  width: 100%;
+  margin-top: 46px;
+  border: 1px solid gray;
+}
+
+article {
+  margin-left: 170px;
+  border-left: 1px solid gray;
+  padding: 1em;
+  overflow: hidden;
+}
+
+aside {
+  float: left;
+  max-width: 50px;
+  margin: 0;
+  padding: 2px;
+}
+
+iframe {
+  height: 500px;
+  width: 100%;
+}
+
+body {
+  background-color: #5D5F65;
+}
+
+.newsContainers {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 49%;
+  font-size: x-large;
+}
+
+.newsPictures {
+  opacity: 50%;
+  width: 50%;
+  height: 300px;
+}
+
+.homePictures {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 33%;
+  height: 300px;
+}
+
+p {
+  font-size: large;
+  font-family: "Times New Roman";
+}
+
+span.error {
+  color: red;
+}
+
+#register_button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    font-size: medium;
+  }
+
+
+#register_button:hover {
+    background-color: black;
+    color: white;
+}
